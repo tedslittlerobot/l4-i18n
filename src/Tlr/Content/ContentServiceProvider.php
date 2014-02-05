@@ -1,8 +1,8 @@
-<?php namespace Tlr\L4Content;
+<?php namespace Tlr\Content;
 
 use Illuminate\Support\ServiceProvider;
 
-class L4ContentServiceProvider extends ServiceProvider {
+class ContentServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
