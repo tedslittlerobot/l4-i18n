@@ -1,3 +1,11 @@
 <?php namespace Tlr\Territorial;
 
-class Territory {}
+use Illuminate\Database\Eloquent\Model as Eloquent;
+
+class Territory extends Eloquent {
+
+	public function languages()
+	{
+		return $this->belongsToMany('Tlr\Territorial\Language');
+	}
+}
