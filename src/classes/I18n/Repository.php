@@ -1,6 +1,6 @@
 <?php namespace Tlr\I18n;
 
-use Repository as SupportRepository;
+use Tlr\Support\Repository as SupportRepository;
 use DB;
 
 abstract class Repository extends SupportRepository {
@@ -14,7 +14,6 @@ abstract class Repository extends SupportRepository {
 
 	/**
 	 * Save the models
-	 * @author Stef Horner (shorner@wearearchitect.com)
 	 */
 	public function save()
 	{

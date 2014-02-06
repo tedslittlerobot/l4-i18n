@@ -6,7 +6,6 @@ abstract class Translation extends Eloquent {
 
 	/**
 	 * Get the model that this is a translation of
-	 * @author Stef Horner (shorner@wearearchitect.com)
 	 * @return BelongsTo
 	 */
 	public function parent()
@@ -18,7 +17,6 @@ abstract class Translation extends Eloquent {
 
 	/**
 	 * The language of this translation
-	 * @author Stef Horner (shorner@wearearchitect.com)
 	 * @return BelongsTo
 	 */
 	public function language()

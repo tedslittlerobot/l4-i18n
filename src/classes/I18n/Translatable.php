@@ -1,6 +1,7 @@
 <?php namespace Tlr\I18n;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
+use Tlr\I18n\Language;
 
 abstract class Translatable extends Eloquent {
 
@@ -13,7 +14,6 @@ abstract class Translatable extends Eloquent {
 	/**
 	 * Get a translation in the given language. If no language is given,
 	 * return the first translation made
-	 * @author Stef Horner   (shorner@wearearchitect.com)
 	 * @param  Language $language
 	 * @param  boolean  $fail     whether or not to fail if there are none
 	 * @return Translation
@@ -42,7 +42,6 @@ abstract class Translatable extends Eloquent {
 
 	/**
 	 * Get the model's translations
-	 * @author Stef Horner       (shorner@wearearchitect.com)
 	 * @return HasMany
 	 */
 	public function translations()
@@ -52,13 +51,12 @@ abstract class Translatable extends Eloquent {
 
 	/**
 	 * Generate the name for the translation class
-	 * @author Stef Horner (shorner@wearearchitect.com)
 	 * @return string
 	 */
 	protected function getTranslationName()
 	{
 		$class = explode('\\', get_class($this));
-		$class[count($class) - 1] = 'Local' . class_basename($this);
+		$class[ count($class) - 1 ] = 'Local' . class_basename( $this );
 
 		return implode('\\', $class);
 	}
